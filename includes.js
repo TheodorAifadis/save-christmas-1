@@ -1,9 +1,13 @@
 
 function includes(arr, item) {
-    // for all i from 0 to arr.length - 1
-    //      if arr[i] is equal to item, return true
+    for (let i = 0; i < arr.length; i++){
+    if (arr[i] === item) {
+        return true
+    }
+}
 
-    // no match was found, return false
+return false
+
 }
 
 const items = [
