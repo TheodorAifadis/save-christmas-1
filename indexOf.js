@@ -1,6 +1,12 @@
 
 function indexOf(arr, item) {
-    
+    for (let i = 0; i < arr.length; i++){
+        const element = arr[i];
+        if (element === item) {
+            return arr.indexOf(item)
+        }
+    }
+    return -1
 }
 
 const items = [
@@ -18,6 +24,7 @@ console.log(indexOf(items, 'Laser sword'))  // Should be -1
 console.log(indexOf(items, 'Playstation'))  // Should be -1
 
 // ------------------
+
 
 console.log(items.indexOf('Lego'))         // Should be 1
 console.log(items.indexOf('Teddybear'))    // Should be 3
