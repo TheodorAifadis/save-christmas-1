@@ -1,11 +1,14 @@
 
 function map(arr, func) {
-    // skapa en ny tom array av samma längd som arr
 
-    // för varje element i arr
-    //      newArray[j] = func(arr[j])
+    const newArray = new Array(arr.length)
 
-    // returnera den nya arrayen
+for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
+        newArray[i] = func(arr[i])
+    }
+    return newArray
+}
 }
 
 // Test 1
@@ -24,3 +27,7 @@ console.log(stringArray)    // ['boll', 'häst', 'flygplan']
 
 // Test 3 - GÖR ETT EGET TEST HÄR
 console.log('\nTEST 3')
+const colorArray = ['red', 'blue', 'green']
+const newColorArray = map(colorArray, str => str.toUpperCase())
+console.log(newColorArray) // ['RED', 'BLUE', 'GREEN']
+console.log(colorArray)    // ['red', 'blue', 'green']
